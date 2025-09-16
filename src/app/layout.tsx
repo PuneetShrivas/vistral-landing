@@ -14,54 +14,61 @@ const geistMono = Geist_Mono({
 });
 import localFont from "next/font/local";
 
-const sfProDisplay = localFont({
+const outfit = localFont({
   src: [
     {
-      path: "./fonts/SFProDisplay/SFPRODISPLAYREGULAR.otf",
+      path: "./fonts/outfit/Outfit-Regular.ttf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "./fonts/SFProDisplay/SFPRODISPLAYMEDIUM.otf",
+      path: "./fonts/outfit/Outfit-Medium.ttf",
       weight: "500",
       style: "normal",
     },
     {
-      path: "./fonts/SFProDisplay/SFPRODISPLAYBOLD.otf",
+      path: "./fonts/outfit/Outfit-Bold.ttf",
       weight: "700",
       style: "normal",
     },
+    {
+      path: "./fonts/outfit/Outfit-Light.ttf",
+      weight: "300",
+      style: "normal",
+    }
   ],
-  variable: "--font-sf-pro", // CSS variable for Tailwind integration
+  variable: "--font-outfit", // CSS variable for Tailwind integration
 });
-export const metadata: Metadata = {
-  title: "Visibel – AI Visibility for Hotels, Restaurants & Agencies",
+export const metadata: Metadata = { 
+  title: "Vistral – Edge-Ready Computer Vision for Industry & Enterprise",
   description:
-    "Visibel helps hotels, restaurants, and agencies win the top slot in AI answers across ChatGPT, Gemini, Perplexity, Grok, and more—driving direct bookings and brand visibility.",
+    "Vistral delivers production-ready computer vision solutions for manufacturing, renewable energy, warehousing, and more — optimized for edge devices, privacy-first, and proven ROI.",
   keywords: [
-    "AI visibility",
-    "hotels",
-    "restaurants",
-    "hospitality marketing",
-    "answer engine optimization",
-    "generative engine optimization",
-    "brand visibility score",
-    "direct bookings",
+    "computer vision",
+    "edge AI",
+    "industrial AI",
+    "privacy-first AI",
+    "manufacturing automation",
+    "renewable energy AI",
+    "quality control automation",
+    "predictive maintenance",
+    "edge deployment",
+    "safety compliance",
   ],
-  authors: [{ name: "Visibel" }],
-  metadataBase: new URL("https://visibel.ai"),
+  authors: [{ name: "Vistral" }],
+  metadataBase: new URL("https://vistral.ai"),
   openGraph: {
-    title: "Visibel – AI Visibility for Hotels, Restaurants & Agencies",
+    title: "Vistral – Edge-Ready Computer Vision for Industry & Enterprise",
     description:
-      "Be the first brand AI recommends. Visibel gets your hotel, restaurant, or client agency mentioned in top AI answers and boosts your direct bookings.",
-    url: "https://visibel.ai",
-    siteName: "Visibel",
+      "Production-ready computer vision for manufacturing, renewable energy, and enterprise — optimized for edge, privacy-first, and proven ROI.",
+    url: "https://vistral.ai",
+    siteName: "Vistral",
     images: [
       {
-        url: "/ss.webp",
+        url: "/og-image.webp",
         width: 1200,
         height: 630,
-        alt: "Visibel Dashboard",
+        alt: "Vistral Dashboard",
       },
     ],
     locale: "en_US",
@@ -69,13 +76,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Visibel – AI Visibility for Hotels, Restaurants & Agencies",
+    title: "Vistral – Edge-Ready Computer Vision for Industry & Enterprise",
     description:
-      "Own the top slot in AI answers. Visibel boosts your brand’s AI visibility score and drives more direct bookings.",
-    images: ["/ss.webp"],
-    creator: "@visibel_ai", // optional, update if you have the handle
+      "Deploy computer vision at the edge. Vistral builds privacy-first, production-ready AI for industry and enterprise with measurable ROI.",
+    images: ["/og-image.webp"],
+    creator: "@vistral_ai", // update if you secure the handle
   },
-  themeColor: "#1E40AF", // Visibel brand blue, adjust as needed
+  themeColor: "#0F172A", // Vistral dark slate brand tone
   viewport: {
     width: "device-width",
     initialScale: 1,
@@ -88,6 +95,7 @@ export const metadata: Metadata = {
 };
 
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -96,7 +104,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${sfProDisplay.variable} antialiased`}
+        className={`${outfit.variable} antialiased`}
       >
         <ThemeProvider
             attribute="class"

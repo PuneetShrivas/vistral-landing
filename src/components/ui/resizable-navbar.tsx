@@ -237,13 +237,13 @@ export const NavbarLogo = () => {
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
     >
       <img
-        src="https://assets.aceternity.com/logo-dark.png"
+        src="vistral_logo.svg"
         alt="logo"
-        width={30}
-        height={30}
+        width={40}
+        height={40}
         style={{ transform: "rotate(180deg)" }}
       />
-      <span className="text-xl font-bold text-black dark:text-white">Visibel</span>
+      <span className="text-xl text-black dark:text-white">VISTRAL</span>
     </a>
   );
 };
