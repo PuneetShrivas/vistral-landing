@@ -45,17 +45,17 @@ export default function Hero() {
     {
       name: "Puneet Shrivas",
       role: "Lead Consultant",
-      image: "/team1.jpg",
+      image: "/puneet_shrivas.jpeg",
     },
     {
       name: "Gautam Murgai",
       role: "Lead Consultant",
-      image: "/team2.jpg",
+      image: "/gautam_murgai.jpeg",
     },
     {
       name: "Puneet Shrivas",
       role: "Lead Consultant",
-      image: "/team3.jpg",
+      image: "/puneet_shrivas.jpeg",
     },
   ];
 
@@ -63,19 +63,19 @@ export default function Hero() {
     {
       author: "Puneet Shrivas",
       role: "Lead Consultant",
-      image: "/blog1.jpg",
+      image: "/b1.jpg",
       desc: "End-to-end AI-Powered solutions that enhance quality, ensure safety and reduce costs.",
     },
     {
       author: "Gautam Murgai",
       role: "Lead Consultant",
-      image: "/blog2.jpg",
+      image: "/b2.jpg",
       desc: "End-to-end AI-Powered solutions that enhance quality, ensure safety and reduce costs.",
     },
     {
       author: "Gautam Murgai",
       role: "Lead Consultant",
-      image: "/blog3.jpg",
+      image: "/b3.jpg",
       desc: "End-to-end AI-Powered solutions that enhance quality, ensure safety and reduce costs.",
     },
   ];
@@ -519,9 +519,9 @@ export default function Hero() {
           renderItem={(member, idx) => (
             <div
               key={idx}
-              className="flex-shrink-0 w-60 rounded-xl bg-neutral-800 p-4 flex flex-col items-center text-center"
+              className="flex-shrink-0 w-72 rounded-xl bg-neutral-800 p-6 flex flex-col items-center text-center"
             >
-              <div className="relative w-40 h-40 mb-4">
+              <div className="relative w-48 h-48 mb-6">
                 <Image
                   src={member.image}
                   alt={member.name}
@@ -529,7 +529,7 @@ export default function Hero() {
                   className="object-cover rounded-lg"
                 />
               </div>
-              <h3 className="text-lg font-semibold">{member.name}</h3>
+              <h3 className="text-xl font-semibold">{member.name}</h3>
               <p className="text-sm text-gray-300">{member.role}</p>
             </div>
           )}
@@ -572,6 +572,33 @@ export default function Hero() {
         </div>
 
       </section>
+      <footer className="max-w-7xl mx-auto px-4 py-16 mt-16 ">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 justify-between w-full">
+          <div className="col-span-1">
+            <h3 className="font-semibold mb-4">Company</h3>
+            <ul className="space-y-2">
+              <li><a href="#team" className="text-sm text-gray-400 hover:text-white">Team</a></li>
+              <li><a href="#results" className="text-sm text-gray-400 hover:text-white">Results</a></li>
+              <li><a href="#process" className="text-sm text-gray-400 hover:text-white">Process</a></li>
+              <li><a href="#industries" className="text-sm text-gray-400 hover:text-white">Industries</a></li>
+            </ul>
+          </div>
+          <div className="col-span-1">
+            <h3 className="font-semibold mb-4">Resources</h3>
+            <ul className="space-y-2">
+              <li><a href="/blog" className="text-sm text-gray-400 hover:text-white">Blog</a></li>
+              <li><a href="/terms" className="text-sm text-gray-400 hover:text-white">Terms</a></li>
+              <li><a href="/privacy" className="text-sm text-gray-400 hover:text-white">Privacy</a></li>
+              <li><a href="https://linkedin.com/company/vistral" className="text-sm text-gray-400 hover:text-white">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mt-12 pt-8 border-t border-white/10">
+          <a href="mailto:hello@vistral.co" className="text-sm text-gray-400 hover:text-white mb-4 md:mb-0">hello@vistral.co</a>
+          <p className="text-sm text-gray-500">© 2025 QUMANS. All rights reserved.</p>
+        </div>
+      </footer>
 
     </div>
   );
